@@ -177,22 +177,15 @@ a {
         .tab-content {
             /* скрыть контент по умолчанию */
             display: none;
-            border: 1px solid #eee;
-            padding: 10px 15px;
-            border-radius: 4px;
         }
 
         .visible {
             /* отобразить контент js*/
             display: block;
+            margin-top: 46px;
         }
     }
 }
-
-
-/* tab content  */
-
-
 
 /* button block*/
 
@@ -212,5 +205,82 @@ a {
             opacity: 0.7;
         }
     }
+
+}
+
+/* tab content Воронка */
+
+.flex-container__tab-content-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item-picture {
+    width: 930px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .statistic__flex-item-picture {
+        display: flex;
+        flex-direction: column;
+
+        .content__statistic {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 519px;
+            padding-bottom: 30px;
+
+            .icon__content {
+                display: flex;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .large-number {
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 48px;
+                color: #333333;
+            }
+        }
+    }
+}
+
+.flex-item-trade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.image__flex-item-trade {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #E9EBF7;
+    border-radius: 7px;
+    padding-left: 25px;
+    width: 355px;
+    height: 105px;
+}
+
+.diagramm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 66px;
+    border: 2px solid #43BEA2;
+    border-radius: 50%;
+}
+
+.bold__text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
 
 }
