@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap');
 
+
 $primary-text-color: #333333;
+$secondary-text-color: #8087A7;
+$green-text-color: #43BEA2;
+$white-text-color: #FFFFFF;
+
 
 * {
     margin: 0;
@@ -31,16 +36,72 @@ h2 {
     color: $primary-text-color;
 }
 
-/* general classes */
-
 .wrapper {
-    /* width: 61.35%; */
     width: 80%;
-    margin: 30px auto;    
+    margin: 30px auto;
+}
+
+.tab-active,
+p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $primary-text-color;
 }
 
 
-/* section classes */
+/* buttons for slider */
+
+a {
+    position: absolute;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+.previous {
+    top: 35%;
+    left: 0;
+    width: 241.44px;
+    height: 296px;
+    background: #E9EBF7;
+    border-top-right-radius: 100% 50%;
+    border-bottom-right-radius: 100% 50%;
+
+    &>img {
+        position: absolute;
+        top: 35%;
+        right: 0;
+    }
+}
+
+.next {
+    top: 35%;
+    right: 0;
+    width: 241.44px;
+    height: 296px;
+    background: #E9EBF7;
+    border-top-left-radius: 100% 50%;
+    border-bottom-left-radius: 100% 50%;
+
+    &>img {
+        position: absolute;
+        top: 35%;
+        left: 0;
+    }
+}
+
+
+/* slideshow section classes */
+
+.slideshow {
+    position: relative
+}
 
 .flex-container {
     display: flex;
@@ -51,6 +112,10 @@ h2 {
 
     .flex-item-image {
         flex: 1;
+
+        img {
+            border-radius: 8px;
+        }
     }
 
     .flex-item-content {
@@ -67,74 +132,61 @@ h2 {
     }
 }
 
-.tab-title,
-p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #8087A7;
-}
-
-.flex-item-image img {
-    border-radius: 8px;
-}
-
 
 /* tabs navigation */
 
 .tabs-container__flex-item-content {
     margin-bottom: 21px;
-}
 
-.tab-panel {
-    max-width: 930px;
-    margin: 0 auto;
-}
+    .tab-panel {
+        max-width: 930px;
+        margin: 0 auto;
 
-.tab-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: #E9EBF7;
-    border-radius: 37px;
-    padding: 20px 28px;
-}
+        .tab-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: #E9EBF7;
+            border-radius: 37px;
+            padding: 20px 28px;
 
-.tab-menu>input[type="radio"] {
-    display: none;
-}
+            &>input[type="radio"] {
+                display: none;
+            }
 
-.tab-menu>input[type="radio"]:checked+label {
-    background: #FFFFFF;
-    border-radius: 34px;
+            &>input[type="radio"]:checked+label {
+                background: #FFFFFF;
+                border-radius: 34px;
+            }
 
-}
+            &>label {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: #8087A7;
+                width: 220px;
+                height: 50px;
+                cursor: pointer;
+            }
 
-.tab-content {
-    /* скрыть контент по умолчанию */
-    display: none;
-    border: 1px solid #eee;
-    padding: 10px 15px;
-    border-radius: 4px;
-}
+            &>label:first-of-type {
+                margin-left: 0;
+            }
+        }
 
-.visible {
-    /* отобразить контент js*/
-    display: block;
-}
+        .tab-content {
+            /* скрыть контент по умолчанию */
+            display: none;
+            border: 1px solid #eee;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
 
-.tab-menu>label {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    width: 220px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.tab-menu>label:first-of-type {
-    margin-left: 0;
+        .visible {
+            /* отобразить контент js*/
+            display: block;
+        }
+    }
 }
 
 
@@ -147,17 +199,18 @@ p {
 .btn__flex-item-content {
     display: flex;
     justify-content: flex-end;
-}
 
-button {
-    background: #43BEA2;
-    color: #FFFFFF;
-    transition: .3s;
-    border-radius: 39px;
-    padding: 18px 58px;
-}
+    button {
+        background: #43BEA2;
+        color: #FFFFFF;
+        transition: .3s;
+        border-radius: 39px;
+        padding: 18px 58px;
 
-button:hover {
-    cursor: pointer;
-    opacity: 0.7;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+    }
+
 }

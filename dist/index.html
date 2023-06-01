@@ -17,16 +17,19 @@
         <section class="slideshow">
             <div class="wrapper">
                 <h1>НАШИ КЕЙСЫ</h1>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+                <!-- arrows for sliders -->
+                <a class="previous" href="#">
+                    <img src="img/arrow-prev-icon.svg" alt="previous">
+                </a>
+                <a class="next" href="#">
+                    <img src="img/arrow-next-icon.svg" alt="next">
+                </a>
+                <!-- slider -->
                 <div class="flex-container">
                     <div class="flex-item-image">
                         <img src="img/erfan-banaei-img.png" alt="">
                     </div>
-                    <!-- blocks-content -->
+                    <!-- content -->
                     <div class="flex-item-content">
                         <div class="header__flex-item-content">
                             <h2>Интернет-магазин ковров</h2>
@@ -40,15 +43,14 @@
                             <div class="tab-panel">
                                 <div class="tab-menu">
                                     <input class="tab-input" type="radio" name="tab-group" id="tab1" checked>
-                                    <label class="tab-title" for="tab1">Воронка</label>
+                                    <label class="tab-active" for="tab1">Воронка</label>
                                     <input class="tab-input" type="radio" name="tab-group" id="tab2">
-                                    <label class="tab-title" for="tab2">Было-стало</label>
+                                    <label for="tab2">Было-стало</label>
                                     <input class="tab-input" type="radio" name="tab-group" id="tab3">
-                                    <label class="tab-title" for="tab3">О компании</label>
+                                    <label for="tab3">О компании</label>
                                     <input class="tab-input" type="radio" name="tab-group" id="tab4">
-                                    <label class="tab-title" for="tab4">Что сделали</label>
+                                    <label for="tab4">Что сделали</label>
                                 </div>
-
                                 <!-- tab-content -->
                                 <section class="tab-content">
                                     content 1
@@ -71,7 +73,7 @@
                     </div>
                 </div>
         </section>
-    </main>    
+    </main>
     <script src="bundle.js"></script>
 </body>
 
