@@ -1,5 +1,16 @@
 import './style.scss';
 
+// const obj = [{
+//     title: 'Интернет-магазин ковров',
+//     img: '',
+//     people: 3945,
+//     request: 3412,
+//     average: 17,
+//     price: 68000,
+//     traficIncrease: 0,
+//     pricePerRequest: 81,
+// }]
+
 let buttonsTabMenu = document.querySelectorAll('.tab-input');
 let sectionTabContent = document.querySelectorAll('.tab-content');
 

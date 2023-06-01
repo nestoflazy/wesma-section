@@ -3,8 +3,10 @@
 
 $primary-text-color: #333333;
 $secondary-text-color: #8087A7;
-$green-text-color: #43BEA2;
-$white-text-color: #FFFFFF;
+$grey-bg-color: #E9EBF7;
+$hover-bg-color: rgba(255, 255, 255, 0.42);
+$white-common-color: #FFFFFF;
+$green-common-color: #43BEA2;
 
 
 * {
@@ -52,8 +54,6 @@ ul {
     }
 }
 
-
-
 .wrapper {
     width: 80%;
     margin: 30px auto;
@@ -83,11 +83,10 @@ a {
 }
 
 .previous {
-    top: 35%;
     left: 0;
     width: 241.44px;
     height: 296px;
-    background: #E9EBF7;
+    background: $grey-bg-color;
     border-top-right-radius: 100% 50%;
     border-bottom-right-radius: 100% 50%;
 
@@ -99,11 +98,10 @@ a {
 }
 
 .next {
-    top: 35%;
     right: 0;
     width: 241.44px;
     height: 296px;
-    background: #E9EBF7;
+    background: $grey-bg-color;
     border-top-left-radius: 100% 50%;
     border-bottom-left-radius: 100% 50%;
 
@@ -124,8 +122,9 @@ a {
 .flex-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 60px 78px 133px 129px;
-    border: 1px solid #E9EBF7;
+    border: 1px solid $grey-bg-color;
     border-radius: 45px;
 
     .flex-item-image {
@@ -164,7 +163,7 @@ a {
             display: flex;
             align-items: center;
             justify-content: space-around;
-            background: #E9EBF7;
+            background: $grey-bg-color;
             border-radius: 37px;
             padding: 20px 28px;
 
@@ -185,6 +184,12 @@ a {
                 width: 220px;
                 height: 50px;
                 cursor: pointer;
+                transition: .3s;
+
+                &:hover {
+                    background: $hover-bg-color;
+                    border-radius: 37px;
+                }
             }
 
             &>label:first-of-type {
@@ -195,7 +200,8 @@ a {
         .tab-content {
             /* скрыть контент по умолчанию */
             display: none;
-            height: 410px;
+            height: 415px;
+            border-bottom: 1px solid $grey-bg-color;
         }
 
         .visible {
@@ -229,7 +235,9 @@ a {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 30px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #E9EBF7;
 
             .icon__content {
                 display: flex;
@@ -241,7 +249,7 @@ a {
                 font-weight: 400;
                 font-size: 40px;
                 line-height: 48px;
-                color: #333333;
+                color: $primary-text-color;
             }
         }
     }
@@ -250,15 +258,14 @@ a {
 .flex-item-trade {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 25px;
+    justify-content: space-between;    
 
     .image__flex-item-trade {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 20px;
-        border: 1px solid #E9EBF7;
+        border: 1px solid $grey-bg-color;
         border-radius: 7px;
         padding: 20px 76px 20px 25px;
 
@@ -276,7 +283,7 @@ a {
             font-weight: 700;
             font-size: 24px;
             line-height: 29px;
-            color: #333333;
+            color: $primary-text-color;
             padding-bottom: 11px;
         }
 
@@ -285,7 +292,7 @@ a {
         }
     }
 
-    .text__flex-item-trade p{
+    .text__flex-item-trade p {
         font-weight: 700;
         font-size: 14px;
         line-height: 17px;
@@ -301,12 +308,20 @@ a {
 
 /* tab content "Было-стало" */
 
+.tab-content.border-panel {
+    border: 1px solid $grey-bg-color;
+}
+
 .flex-container__tab-content-2 {
     display: flex;
-    border: 1px solid #E9EBF7;
     padding: 21px 38px;
 
+    &:first-child {
+        border-bottom: 1px solid $grey-bg-color;
+    }
+
     .flex-item-row {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -327,7 +342,7 @@ a {
             justify-content: center;
             width: 163px;
             height: 163px;
-            background: #E9EBF7;
+            background: $grey-bg-color;
             border-radius: 50%;
 
             p {
@@ -339,6 +354,12 @@ a {
             }
         }
 
+        & :not(:last-child) {
+            h3 {
+                position: absolute;
+                top: 5px;
+            }
+        }
     }
 }
 
@@ -368,6 +389,9 @@ a {
 
     ul {
         width: 420px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
     }
 }
 
