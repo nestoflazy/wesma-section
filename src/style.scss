@@ -195,6 +195,7 @@ a {
         .tab-content {
             /* скрыть контент по умолчанию */
             display: none;
+            height: 410px;
         }
 
         .visible {
@@ -205,28 +206,8 @@ a {
     }
 }
 
-/* button block*/
 
-.btn__flex-item-content {
-    display: flex;
-    justify-content: flex-end;
-
-    button {
-        background: #43BEA2;
-        color: #FFFFFF;
-        transition: .3s;
-        border-radius: 39px;
-        padding: 18px 58px;
-
-        &:hover {
-            cursor: pointer;
-            opacity: 0.7;
-        }
-    }
-
-}
-
-/* tab content Воронка */
+/* tab content "Воронка" */
 
 .flex-container__tab-content-1 {
     display: flex;
@@ -242,12 +223,12 @@ a {
     .statistic__flex-item-picture {
         display: flex;
         flex-direction: column;
+        width: 460px;
 
         .content__statistic {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            width: 519px;
             padding-bottom: 30px;
 
             .icon__content {
@@ -271,39 +252,54 @@ a {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 25px;
+
+    .image__flex-item-trade {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid #E9EBF7;
+        border-radius: 7px;
+        padding: 20px 76px 20px 25px;
+
+        .diagramm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 66px;
+            height: 66px;
+            border: 2px solid #43BEA2;
+            border-radius: 50%;
+        }
+
+        .bold__text {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #333333;
+            padding-bottom: 11px;
+        }
+
+        .regular__text {
+            color: #AAAAAA;
+        }
+    }
+
+    .text__flex-item-trade p{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: right;
+        color: #43BEA2;
+    }
+
+    p:first-child {
+        padding-bottom: 10px;
+    }
 }
 
-.image__flex-item-trade {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    border: 1px solid #E9EBF7;
-    border-radius: 7px;
-    padding-left: 25px;
-    width: 355px;
-    height: 105px;
-}
 
-.diagramm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 66px;
-    height: 66px;
-    border: 2px solid #43BEA2;
-    border-radius: 50%;
-}
-
-.bold__text {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    color: #333333;
-
-}
-
-/* tab content Было-стало */
+/* tab content "Было-стало" */
 
 .flex-container__tab-content-2 {
     display: flex;
@@ -346,7 +342,8 @@ a {
     }
 }
 
-/* tab content О компании */
+
+/* tab content "О компании" */
 
 .flex-container__tab-content-3 {
     display: flex;
@@ -362,7 +359,7 @@ a {
 }
 
 
-/* tab content Что сделали */
+/* tab content "Что сделали" */
 
 .flex-container__tab-content-4 {
     display: flex;
@@ -372,4 +369,26 @@ a {
     ul {
         width: 420px;
     }
+}
+
+
+/* button block*/
+
+.btn__flex-item-content {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        background: #43BEA2;
+        color: #FFFFFF;
+        transition: .3s;
+        border-radius: 39px;
+        padding: 18px 58px;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+    }
+
 }
